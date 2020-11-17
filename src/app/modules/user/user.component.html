@@ -1,0 +1,7 @@
+<nav>
+    <a style="background-color: black" routerLink="tickets">Tickets</a>
+    <a style="background-color: black" *ngIf="!(currentUser === undefined) && currentUser.admin" routerLink="admin">Admin</a>
+    <a style="background-color: black" routerLink="account">Account</a>
+    <a class="log" routerLink="/login" (click)="logout()" style="float:right">Logout</a>
+</nav>
+<router-outlet></router-outlet>
